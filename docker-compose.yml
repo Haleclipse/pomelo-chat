@@ -20,7 +20,7 @@ services:
 
   # visit: http://127.0.0.1:33001/
   pomelo:
-    image: hustlion/pomelo:0.1.0
+    image: hustlion/pomelo:0.1.1
     deploy:
       restart_policy:
           condition: on-failure
