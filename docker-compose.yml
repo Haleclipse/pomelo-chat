@@ -17,6 +17,8 @@
 version: '3.1'
 
 services:
+
+  # visit: http://127.0.0.1:33001/
   pomelo:
     image: hustlion/pomelo:0.1.0
     deploy:
@@ -24,8 +26,10 @@ services:
           condition: on-failure
     ports:
       - 33001:3001
+      - 33014:33014
     volumes:
       - "/Users/hustlion/tmp/docker/tmpData:/data"
+      - "/Users/hustlion/hugo/game/pomelo:/code"
     networks:
       - pomelo-net
 
