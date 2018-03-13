@@ -11,8 +11,8 @@
 ## 进入 container
 ### 找到 container, 如果没开成功用 docker container ls -a 看全部
 # docker container ls
-### 进入 container
-# docker exec -it e9410ee182bd /bin/sh
+### 进入 container 的 bash
+# docker exec -it e9410ee182bd /bin/bash
 
 version: '3.1'
 
