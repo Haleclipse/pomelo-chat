@@ -27,6 +27,9 @@ services:
     ports:
       - 33001:3001
       - 33014:33014
+      - 33050:33050
+      - 33051:33051
+      - 33052:33052
     volumes:
       - "/Users/hustlion/tmp/docker/tmpData:/data"
       - "/Users/hustlion/hugo/game/pomelo:/code"
