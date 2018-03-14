@@ -15,7 +15,7 @@ app.configure('production|development', 'connector', function(){
 			connector : pomelo.connectors.hybridconnector,
 			heartbeat : 3,
 			useDict : true, // 路由压缩
-			useProtobuf : true
+			useProtobuf : true // pomelo的protobuf实现
 		});
 });
 
@@ -23,6 +23,7 @@ app.configure('production|development', 'gate', function(){
 	app.set('connectorConfig',
 		{
 			connector : pomelo.connectors.hybridconnector,
+            useDict : true,
 			useProtobuf : true
 		});
 });
