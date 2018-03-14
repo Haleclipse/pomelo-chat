@@ -34,11 +34,18 @@ handler.queryEntry = function(msg, session, next) {
 		});
 		return;
 	}
-	// select connector
-	var res = dispatcher.dispatch(uid, connectors);
-	next(null, {
-		code: 200,
-		host: res.host,
-		port: res.clientPort
-	});
+
+	var routeParam = Math.floor(Math.random() * 10);
+	this.app.rpc.time.timeRemote.getCurrentTime(routeParam, "Hello", routeParam, function (hour, min, sec) {
+        console.log("remote time: " + hour + ":" + min + ":" + sec);
+        // select connector
+        var res = dispatcher.dispatch(uid, connectors);
+        next(null, {
+            code: 200,
+            host: res.host,
+            port: res.clientPort
+        });
+    });
+
+
 };

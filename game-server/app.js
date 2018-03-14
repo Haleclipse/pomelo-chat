@@ -36,6 +36,7 @@ app.configure('production|development', 'chat', function () {
 app.configure('production|development', function() {
 	// route configures
 	app.route('chat', routeUtil.chat);
+	app.route('time', routeUtil.time);
 
 	// filter configures
 	app.filter(pomelo.timeout());
