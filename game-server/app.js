@@ -14,7 +14,7 @@ app.configure('production|development', 'connector', function(){
 		{
 			connector : pomelo.connectors.hybridconnector,
 			heartbeat : 3,
-			useDict : true,
+			useDict : true, // 路由压缩
 			useProtobuf : true
 		});
 });
