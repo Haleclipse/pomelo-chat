@@ -1,7 +1,7 @@
 var pomelo = require('pomelo');
 var routeUtil = require('./app/util/routeUtil');
 var abuseFilter = require('./app/servers/chat/filter/abuseFilter');
-
+var helloWorld = require('./app/components/HelloWorld');
 /**
  * Init app for client.
  */
@@ -9,6 +9,11 @@ var app = pomelo.createApp();
 app.set('name', 'chatofpomelo-websocket');
 
 // app configuration
+app.configure('production|development', 'master', function () {
+   app.load(helloWorld, {interval: 5000});
+});
+
+
 app.configure('production|development', 'connector', function(){
 	app.set('connectorConfig',
 		{
