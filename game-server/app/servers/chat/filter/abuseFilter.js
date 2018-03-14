@@ -1,3 +1,6 @@
+// 脏话过滤，超级简陋而且并不一定很合理版
+// https://github.com/NetEase/pomelo/wiki/%E5%A2%9E%E5%8A%A0filter
+
 module.exports = function () {
     return new Filter();
 }
